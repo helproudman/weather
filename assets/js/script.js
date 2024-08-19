@@ -35,8 +35,8 @@ function callAPI() {
                 currentSummary.innerText = data.list[0].weather[0].description;
 
                 locationDisplay.innerText = locationName.charAt(0).toUpperCase() + locationName.slice(1);
-                console.log(locationDisplay);
                 
+
 
 
             }
