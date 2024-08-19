@@ -15,20 +15,32 @@ let apiKey = '752dd876d2d8e2f3f4886c7c478bb5d5';
 function callAPI() {
     let locationName = locationInput.value;
 
-    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${locationName}&appid=${apiKey}&units=metric`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${locationName}&appid=${apiKey}&units=metric`;
 
     fetch(apiURL)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            
+
                 console.log(data);
-                let temperatureToday = data.main.temp;
+                let temperatureToday = data.list[0].main.temp;
                 console.log(temperatureToday);
                 document.getElementById("current-temperature").innerHTML = `Today's temperature: ${temperatureToday}`;
+
+                // let iconToday = data.list[0].weather[0].icon;
+                // console.log(iconToday);
+                // currentWeatherIcon.innerHTML = '<image src="https://openweathermap.org/img/wn/04d@2x.png"></image>';
+
+                currentSummary.innerText = data.list[0].weather[0].description;
+
+                locationDisplay.innerText = locationName.charAt(0).toUpperCase() + locationName.slice(1);
+                console.log(locationDisplay);
+                
+
+
             }
 
         )
-        
+
 }
