@@ -1,7 +1,11 @@
 body {
-    background-color: blueviolet;
+    
     max-width: 90%;
-    max-height: 90%;
+    min-height: 100vh;
+    
+    background: -webkit-linear-gradient(#1778e6, #f3dff0);
+    background:    -moz-linear-gradient(#1778e6, #f3dff0);
+    background:         linear-gradient(#1778e6, #f3dff0);
 }
 
 .general-styles {
