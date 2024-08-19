@@ -1,4 +1,10 @@
 body {
     background-color: blueviolet;
-    
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.general-styles {
+    text-align: center;
+    margin-top: 5px;
 }

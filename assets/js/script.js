@@ -22,7 +22,7 @@ function callAPI() {
             return response.json();
         })
         .then(function (data) {
-
+//set the data for current day
                 console.log(data);
                 let temperatureToday = data.list[0].main.temp;
                 console.log(temperatureToday);
@@ -31,12 +31,11 @@ function callAPI() {
                 // let iconToday = data.list[0].weather[0].icon;
                 // console.log(iconToday);
                 // currentWeatherIcon.innerHTML = '<image src="https://openweathermap.org/img/wn/04d@2x.png"></image>';
+//add current location to html and uppercase first letter                 
 
                 currentSummary.innerText = data.list[0].weather[0].description;
 
                 locationDisplay.innerText = locationName.charAt(0).toUpperCase() + locationName.slice(1);
-                
-
 
 
             }
