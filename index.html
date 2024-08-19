@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather forecast</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <h1>Weather forecast</h1>
-    <div class="location">
-        <label for="location-finder">Search for your location</label>
-        <input type="text" class="location-finder" id="location-finder">
+    <div class="location-search">
+        <label for="location-input">Search for your location</label>
+        <input type="text" class="location-input" id="location-input">
+        <button id="location-search">click to search</button>
+    </div>
+
+    <div class="location-display">
+        <h2 id="location-display">Your location</h2>
+    </div>
+
+    <div class="current-weather">
+        <p id="current-temperature">display temperature today</p>
+        <p id="current-summary">display today's weather summary</p>
+        <img src="" alt="" class="current-weather-icon" id="current-weather-icon" alt="today's weather">
+        
+    </div>
+
+    <div id="forecast">
+
     </div>
 
 
@@ -18,4 +36,5 @@
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
