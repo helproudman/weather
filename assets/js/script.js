@@ -59,21 +59,24 @@ function callAPI() {
 
         })
         .then(function (data) {
-                //set the data for current day
+            //sending an alert if the data isn't available
+                
                 console.log(data);
                 if (data.cod !== "200") {
                     alert("something went wrong");
                 }
+                //set the data for current day
                 let temperatureToday = Math.round(data.list[0].main.temp);
                 console.log(temperatureToday);
                 document.getElementById("current-temperature").innerHTML = `Today's temperature: ${temperatureToday}°C`;
 
-                let iconToday = data.list[0].weather[0].icon;
-                console.log("Icon code:", iconToday);
+                
+        //         let iconToday = data.list[0].weather[0].icon;
+        //         console.log("Icon code:", iconToday);
         // currentWeatherIcon.innerHTML = '<image src="https://openweathermap.org/img/wn/04d@2x.png"></image>';
-        // currentWeatherIcon.innerHTML = '<img src="https://openweathermap.org/img/wn/04d@2x.png">';
+        
 
-        // currentWeatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${iconToday}@2x.png" id="current-weather-icon" alt="weather today">`;
+        //currentWeatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/04d@2x.png">`;
 
                 //add current location to html and uppercase first letter                 
 
@@ -96,8 +99,10 @@ function callAPI() {
     function addForecast(data, day) {
         let temperature = `${Math.round(data.main.temp)}°C`;
         // console.log(temperature);
-        let summary = data.weather[0].description;
-        let windSpeed = data.wind.speed;
+        let summary = `Today's summary 
+        ${data.weather[0].description}`;
+        let windSpeed = `Wind speed 
+        ${data.wind.speed}`;
 
         let forecastString = `<div class="col-sm-12, col-md-4 col-lg-3"> ${temperature} <br>${summary}<br>${windSpeed} </div>`;
         document.getElementById("forecast").innerHTML += forecastString;
