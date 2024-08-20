@@ -20,8 +20,10 @@
             </div>
 
             <div class="col-sm-12">
+                <form id="input">
                 <label for="location-input">Search for your location</label>
                 <input type="text" class="location-input" id="location-input" placeholder="search for a place">
+            </form>
             </div>
             <div class="col">
                 <button id="location-search">click to search</button>
@@ -38,7 +40,7 @@
 
                 <p id="current-temperature" class="general-styles">display temperature today</p>
                 <p id="current-summary" class="general-styles">display today's weather summary</p>
-                <!-- <img src="" id="current-weather-icon" alt="today's weather"> -->
+                <img src="https://openweathermap.org/img/wn/04d@2x.png" id="current-weather-icon" alt="today's weather">
 
 
             </div>
@@ -47,6 +49,9 @@
         <!-- forecast for next four days in bootstrap columns to be responsive -->
 
         <div class="row general-styles" id="forecast">
+            <div class="col-sm-12, col-md-4 col-lg-3">    
+            <p class="four-day-forecast">What does the weather have in store for you this week?</p>
+        </div>
             
 
             
