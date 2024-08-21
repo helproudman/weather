@@ -5,6 +5,7 @@ const locationDisplay = document.getElementById("location-display");
 const currentWeatherIcon = document.getElementById("current-weather-icon");
 const currentSummary = document.getElementById("current-summary");
 const forecast = document.getElementById("forecast");
+const currentDate = document.getElementById("current-date");
 
 
 
@@ -52,7 +53,12 @@ function callAPI() {
                 if (data.cod !== "200") {
                     alert("something went wrong");
                 }
+
+
                 //set the data for current day
+
+                //add today's date
+                currentDate.innerText = data.list[0].dt_txt;
                 //convert temperature to integer
                 let temperatureToday = Math.round(data.list[0].main.temp);
                 console.log(temperatureToday);
@@ -75,6 +81,9 @@ function callAPI() {
 
                 locationDisplay.innerText = locationName.charAt(0).toUpperCase() + locationName.slice(1);
 
+                //add date
+
+
 
 
                 // add forecast via function below to next four days
@@ -92,6 +101,7 @@ function callAPI() {
     function addForecast(data, day) {
         let temperature = `${Math.round(data.main.temp)}°C`;
         // console.log(temperature);
+        let date = `Date/time <br>${data.dt_txt}`;
         let summary = `
         ${data.weather[0].description}`;
         let windSpeed = `Wind speed <br>
@@ -103,7 +113,7 @@ function callAPI() {
         
         
 
-        let forecastString = `<div> ${temperature} <br> <img src="${iconUrl}" alt="${summary}"><br>${summary}<br>${windSpeed} </div>`;
+        let forecastString = `<div>${date} <br>${temperature} <br> <img src="${iconUrl}" alt="${summary}"><br>${summary}<br>${windSpeed} </div>`;
         document.getElementById("forecast").innerHTML += forecastString;
 
     }

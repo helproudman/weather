@@ -18,57 +18,61 @@
             <div class="col-sm-12 general-styles">
                 <h1>Weather forecast</h1>
             </div>
+            
+                <div class="col-sm-12">
 
-            <div class="col-sm-12">
-                <form id="input">
-                    <label for="location-input">Search for your location</label>
-                    <input type="text" class="location-input form-control" id="location-input" placeholder="search for a place">
-                </form>
-            </div>
-            <div class="col mx-auto">
-                <button id="location-search" class="btn btn-info" type="button" aria-label="add location to search">click to search</button>
-            </div>
-
+                    <form id="input">
+                        <label for="location-input">Search for your location</label>
+                        <input type="text" class="location-input form-control" id="location-input"
+                            placeholder="search for a place">
+                    </form>
+                </div>
+                <div class="col mx-auto">
+                    <button id="location-search" class="btn btn-info" type="button"
+                        aria-label="add location to search">click to search</button>
+                </div>
+            
             <!-- display for current day -->
 
             <div class="col-sm-12" id="current-day">
                 <h2 id="location-display" class="general-styles">Your location</h2>
             </div>
 
-            <div class="col-sm-12 mx-auto general-styles">
+            <div class="col-sm-12 col-md-3 mx-auto general-styles" id="weather-today">
+                <p id="current-date">Today's date</p>
+                
 
 
                 <p id="current-temperature">Today's temperature</p>
                 <p id="current-summary">Today's weather summary</p>
                 <div class="mx-auto">
-                
-                    <img src="icons/unknown.png" id="current-weather-icon"
-                        alt="today's weather summary as an icon">
-                    </div>
-                
+
+                    <img src="icons/unknown.png" id="current-weather-icon" alt="today's weather summary as an icon">
+                </div>
+
 
 
             </div>
         </div>
         <!-- <br> -->
         <!-- forecast for next four days in bootstrap columns to be responsive -->
-        
+
 
         <div class="row general-styles" id="forecast">
             <div class="col-sm-12, col-md-3 col-lg-3">
-                
+
             </div>
-            
+
         </div>
-        
 
 
 
-        
+
+
     </div>
 
     <div id="test-background">
-        
+
     </div>
 
 

@@ -23,6 +23,12 @@ body {
   margin-top: 100px;
 }
 
+#weather-today {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
 /* #background {
     width: 100vw;
     height: 100vh;
