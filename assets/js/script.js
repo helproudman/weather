@@ -67,10 +67,9 @@ function callAPI() {
 
 //set weather icon to correct one for the day
                 let iconToday = data.list[0].weather[0].icon;
-                console.log("Icon code:", iconToday);
+                
                 currentWeatherIcon.src = `/icons/${iconToday}.png`;
-                console.log(`<img src ="/icons/${iconToday}.png">`);
-
+                
 
 
 
@@ -81,12 +80,12 @@ function callAPI() {
 
                 locationDisplay.innerText = locationName.charAt(0).toUpperCase() + locationName.slice(1);
 
-                //add date
+            
 
 
 
 
-                // add forecast via function below to next four days
+                // collect data for next four days to add to forecast via function below 
                 addForecast(data.list[1], 1);
                 addForecast(data.list[2], 2);
                 addForecast(data.list[3], 3);
@@ -95,23 +94,24 @@ function callAPI() {
 
 
 
-        )
+        );
 
     // function to call data for each day and add to html using a template literal
     function addForecast(data, day) {
+        //define variables for each weather element
         let temperature = `${Math.round(data.main.temp)}°C`;
-        // console.log(temperature);
+        
         let date = `Date/time <br>${data.dt_txt}`;
         let summary = `
         ${data.weather[0].description}`;
         let windSpeed = `Wind speed <br>
         ${data.wind.speed} m/s`;
-        // let icon = `/icons/${data.weather[0].icon}.png`;
+        
 
         let iconCode = data.weather[0].icon;
         let iconUrl = `/icons/${iconCode}.png`;
         
-        
+        //combine weather elements into a template literal and insert it into the correct div to display
 
         let forecastString = `<div>${date} <br>${temperature} <br> <img src="${iconUrl}" alt="${summary}"><br>${summary}<br>${windSpeed} </div>`;
         document.getElementById("forecast").innerHTML += forecastString;
@@ -120,17 +120,3 @@ function callAPI() {
 
 }
 
-// let testBackground = document.getElementById("background");
-// let toggleBackground = document.getElementById("toggle-weather");
-
-// function toggleWeather() {
-//     console.log("hello");
-//     // testBackground.style.backgroundColor = "lightblue";
-//     testBackground.style.backgroundImage = "url('../images/rain.jpg')";
-//     // testBackground.classList.toggle("test");
-//     testBackground.classList.toggle("test2");
-
-//     // background.classList.toggle('image1');
-//     // background.classList.toggle('image2');
-// }
-// toggleBackground.addEventListener("click", toggleWeather);
