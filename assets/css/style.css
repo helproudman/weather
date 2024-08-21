@@ -1,28 +1,28 @@
-/* body {
+body {
     
     height: 600px;
     width: 100%;
     background: url("../images/sunny.jpg") no-repeat center center/cover;
+    background-color: white;
     position: relative;
-} */
+}
 
 .general-styles {
     text-align: center;
     margin-top: 5px;
 }
 
-#background {
+/* #background {
     width: 100vw;
     height: 100vh;
     background: url("../images/sunny.jpg") no-repeat center center/cover;
-    /* background-size: cover;
-    background-position: center; */
+    
     color: white;
     padding: 20px;
     margin-bottom: 20px;
-  }
+  } */
 
-  .image1 {
+  /* .image1 {
     /* background-image: url("../images/sunny.jpg"); */
     background-color: black;
   }
@@ -30,7 +30,7 @@
   .image2 {
     /* background-image: url("../images/rain.jpg"); */
     background-color: bisque;
-  }
+  } */
   
   #toggle-weather {
     padding: 10px 20px;
@@ -38,7 +38,7 @@
     cursor: pointer;
   }
 
-  #test-background {
+  /* #test-background {
     background-color: black;
     height: 100px;
     width: 100px;
@@ -46,13 +46,15 @@
   }
 
   .test {
+    /* background-image: url("../images/sunny.jpg"); */
     background-color: blueviolet;
     height: 150px;
     width: 150px;
   }
 
   .test2 {
+    background-image: url("../images/rain.jpg");
     background-color: red;
     height: 150px;
     width: 150px;
-  }
+  } */
