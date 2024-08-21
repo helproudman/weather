@@ -54,3 +54,7 @@ body {
   bottom: 0;
   width: 100%;
 }
+
+i:hover {
+  background-color: white;
+}
