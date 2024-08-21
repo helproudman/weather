@@ -8,25 +8,12 @@ const forecast = document.getElementById("forecast");
 
 
 
-//locationSearch.addEventListener("click", callAPI);
-//locationSearch.addEventListener("mousedown", callAPI);
-//locationSearch.addEventListener("keydown", callAPI);
-
 //add eventlistener for click on mouse which triggers click event and calls the callAPI function
-locationSearch.addEventListener("mousedown", function (event) {
+locationSearch.addEventListener("click", function (event) {
 
     event.preventDefault();
     callAPI();
 });
-
-//code to try and add event listener for hitting enter on keyboard
-// locationSearch.addEventListener("keydown", function (event) {
-//     if (event.key === 'Enter') {
-//         event.preventDefault();
-//         callAPI();
-//     }
-// });
-
 
 
 // openweathermap.api used 
@@ -59,33 +46,36 @@ function callAPI() {
 
         })
         .then(function (data) {
-            //sending an alert if the data isn't available
-                
+                //sending an alert if the data isn't available
+
                 console.log(data);
                 if (data.cod !== "200") {
                     alert("something went wrong");
                 }
                 //set the data for current day
+                //convert temperature to integer
                 let temperatureToday = Math.round(data.list[0].main.temp);
                 console.log(temperatureToday);
+
                 document.getElementById("current-temperature").innerHTML = `Today's temperature: ${temperatureToday}°C`;
 
-                
+//set weather icon to correct one for the day
                 let iconToday = data.list[0].weather[0].icon;
                 console.log("Icon code:", iconToday);
                 currentWeatherIcon.src = `/icons/${iconToday}.png`;
                 console.log(`<img src ="/icons/${iconToday}.png">`);
-                
 
 
-        // currentWeatherIcon.innerHTML = '<image src="https://openweathermap.org/img/wn/04d@2x.png"></image>';
-        //currentWeatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/04d@2x.png">`;
+
+
 
                 //add current location to html and uppercase first letter                 
 
                 currentSummary.innerText = data.list[0].weather[0].description;
 
                 locationDisplay.innerText = locationName.charAt(0).toUpperCase() + locationName.slice(1);
+
+
 
                 // add forecast via function below to next four days
                 addForecast(data.list[1], 1);
@@ -102,12 +92,18 @@ function callAPI() {
     function addForecast(data, day) {
         let temperature = `${Math.round(data.main.temp)}°C`;
         // console.log(temperature);
-        let summary = `Today's summary 
+        let summary = `
         ${data.weather[0].description}`;
-        let windSpeed = `Wind speed 
-        ${data.wind.speed}`;
+        let windSpeed = `Wind speed <br>
+        ${data.wind.speed} m/s`;
+        // let icon = `/icons/${data.weather[0].icon}.png`;
 
-        let forecastString = `<div class="col-sm-12, col-md-4 col-lg-3"> ${temperature} <br>${summary}<br>${windSpeed} </div>`;
+        let iconCode = data.weather[0].icon;
+        let iconUrl = `/icons/${iconCode}.png`;
+        
+        
+
+        let forecastString = `<div> ${temperature} <br> <img src="${iconUrl}" alt="${summary}"><br>${summary}<br>${windSpeed} </div>`;
         document.getElementById("forecast").innerHTML += forecastString;
 
     }
