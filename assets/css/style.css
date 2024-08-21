@@ -6,6 +6,7 @@ body {
     background-color: lightblue;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .general-styles {
@@ -13,11 +14,20 @@ body {
     margin-top: 5px;
 }
 
+.contrast-text-colour {
+  color: rgb(59, 240, 183);
+}
+
+
 #location-search {
   position:absolute;
   margin-top: 10px;
   
 }
+
+/* #location-input-label {
+  margin-left: auto;
+} */
 
 #current-day {
   margin-top: 100px;
