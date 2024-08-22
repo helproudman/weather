@@ -1,6 +1,6 @@
 body {
 
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: url("../images/sunny.jpg") no-repeat center center/cover;
   background-color: lightblue;
@@ -49,7 +49,7 @@ body {
 }
 
 .footer {
-  position: fixed;
+  position: static;
   left: 0;
   bottom: 0;
   width: 100%;
