@@ -17,6 +17,7 @@ body {
 /* style to add contrast for accessibilty */
 .contrast-text-colour {
   color: rgb(47, 237, 72);
+  font-size: 25px;
 }
 
 
