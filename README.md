@@ -4,17 +4,17 @@
 > 
 > 
 
-# Viva Las Vegas
+# Weather forecast
 
-![Welcome to Vegas](readme-docs/landing.png)
+![Welcome to Vegas](readme-docs/weather.png)
 
 
-> [View live project here](https://jwcurtis94.github.io/vivalasvegas/)
+> [View live project here](https://helproudman.github.io/weather/)
 > 
-> This is a visitor guide to Las Vegas giving the user ideas on where to go and what to see in an easy to navigate and fun way. Accessible on a range of devices it is a handy way to get tourist information on this amazing destination.
+> This is a simple weather application which allows users to search for their location and displays the current day and the forecast for the subsequent four days.
 ---
 > 
-![responsivity image](readme-docs/responsivity.png)
+![responsivity image](readme-docs/responsive.png)
 >
 ---
 
@@ -47,20 +47,19 @@
 		 
      * As a first time visitor I want to know what the aim of the site is and the information I can gain from it
 		 
-     * As a first time visitor I want to be able to navigate the site easily and be able to return to different sections
+     * As a first time visitor I want to be able to navigate the site easily and be able to navigate it easily and obtain a forecast quickly
 		 
      * As a first time user I want to be able to view the site on a variety of different devices and have the content appear in a logical way
 		 
 - **Returning visitor goals**
 		
     
-    * As a returning visitor I want to be able to find more in depth information about Las Vegas
+    * As a returning visitor I want to be able to find my favourite locations easily
 		
-    * As a returning visitor I want to be able to find where to go for more information
-
+    
 - **Frequent visitor goals**
 		
-    * As a frequent visitor I want to be able to sign up for a newsletter
+    * As a frequent visitor I want to be able to find out more information about the developer
 ---
 
 ## CREATION PROCESS
@@ -69,19 +68,19 @@
 <details open>
 <summary>Mobile Wireframe</summary>
 
-  ![Mobile](readme-docs/mobile-view.png)
+  ![Mobile](readme-docs/mobile.png)
 </details>
 
 <details>
 <summary>Tablet Wireframe</summary>
 
-  ![Mobile](readme-docs/tablet-view.png)
+  ![Mobile](readme-docs/tablet.png)
 </details>
 
 <details>
 <summary>Desktop Wireframe</summary>
 
-  ![Mobile](readme-docs/desktop-view.png)
+  ![Mobile](readme-docs/desktop.png)
 </details>
 
 
@@ -90,82 +89,52 @@
 ## DESIGN
   - **Typography**
     
-    [Google Fonts](https://fonts.google.com/) was used to provide the Poppins font chosen
+    The Arial font was chosen as it is clear and easy to read to aid with accessibility and keep the site simple. Helvetica was chosen as a back up for the same reasons
   - **Colour scheme**
     
-    The colour scheme chosen was predominantly black, white and shades of light grey to give a minimal and stylish look to the site without detracting from the colourful images of the city. A red was chosen to highlight the call to action button and is echoed when the menu items are hovered over.
+    The colour scheme was chosen to contrast and enhance the background image. Tthe font colour was chosen using the colour picker available on Apple mac to find the RGB values which were then put into [Contrast finder](https://app.contrast-finder.org/?lang=en) to ensure good contrast between background and text. The colour of the footer was chosen to match the colour of the background image in a similar way.
   - **Imagery**
     
-    The images chosen were felt to represent the fun and dynamic nature of Las Vegas and also it's contrasting feel from day to night.
-    The hero image was chosen to make a statement and make the user want to find out more about the city.
-    The images in the feature sections were chosen to represent the wide array of activities and places to visit in Vegas.
-    [Pexels](https://www.pexels.com/) and [Wallpaper Cave](https://wallpapercave.com/) were used to provide the royalty-free stock images used. Acknowledgements for the individual photographers are in the [credits](#credits) section.
-
-    The video on the landing page is a mnc no copyright music video from [YouTube](https://www.youtube.com/embed/pzO4Au1YN2k?si=fgwEbX2rrtiWhRXX) 
+    The image chosen for the background for the site was intended to draw users in and make a statement. [Pexels](https://www.pexels.com/) was used to provide the royalty-free stock image. Acknowledgements for the individual photographers are in the [credits](#credits) section.
+ 
 
 
  ---
 
 ## WEBSITE FEATURES
 
-  **NAVBAR**
-  ![navbar](readme-docs/navbar.png)
+  **SEARCH FIELD**
+  ![search](readme-docs/search.png)
 
-  The navbar appears as above on desktop and laptops with the menu links collapsing down to a burger icon on tablet and mobile screens. It remains at the top of the screen during scrolling.
+  The search field appears as above on desktop and laptops.
 
-  **HERO IMAGE**
+  **MAIN VIEW**
   <details open>
-  <summary>hero image</summary
+  <summary>landing page</summary
     
-  ![hero image](readme-docs/hero-image.png)
+  ![landing page](readme-docs/weather.png)
   </details>
-  The hero image remains the same across all devices
+  The landing page appears the same on all devices
 
 <br>
-
-  **FLY THROUGH**
-  <details>
-  <summary>Fly through image</summary
     
-  ![fly through image](readme-docs/fly-through.png)
+  **FORECAST VIEW**
+  <details>
+  <summary>Forecast view before locations search</summary
+    
+  ![forecast view image](readme-docs/forecast-view.png)
   </details>
-  The fly through feature is a video showcasing many different areas of the city through day and night. It is set not to start automatically allowing the user to decide whether or not they want to play the video.
+  Once the user has searched for a location the current day and following four day forecast is shown.
 
   <br>
-
-  **ACTIVITIES FEATURE**
-  <details>
-  <summary>Activities image</summary
-    
-  ![activities image](readme-docs/activities-feature.png)
-  </details>
-  The activities feature gives information on the city and shows images of the activities available each of which comes to the forefront when hovered over.
-
-  <br>
-
-  **THE STRIP FEATURE**
-  <details>
-  <summary>The Strip image</summary
-    
-  ![the strip image](readme-docs/strip-feature.png)
-  </details>
-  The images in Strip feature operate in the same way as the Activities feature.
-
-  <br>
-
-  **NEWSLETTER FEATURE**
-  <details>
-  <summary>Newsletter image</summary
-    
-  ![newsletter image](readme-docs/newsletter-feature.png)
-  </details>
 
   **SOCIAL LINKS FEATURE**
   <details>
   <summary>Social links image</summary
     
-  ![newsletter image](readme-docs/social-links.png)
+  ![footer image](readme-docs/footer.png)
   </details>
+  The footer gives links to social sites and GitHub which are highlighted when hovered over. The colours match the overall theme of the site.
 
 
 
@@ -173,12 +142,20 @@
  ---
 
 ## FUTURE FEATURES
-The following would be options to coonsider including in future versions of the website:
-  - more sections added to include 'Where to get married', 'The best casinos', 'Tours', and 'Clubs'
+The following would be options to consider including in future versions of the website:
+  - animated icons for the weather to make the site more appealing
 
-  - the ability to book hotels
+  - more weather information for the four day forecast
 
-  - a dedicated gallery page
+  - a conversion from celsius to fahrenheit
+
+  - clickable temperature which will do the conversion
+
+  - a weather map
+
+  - extra pages giving specialised weather, eg for sailing
+
+  - a page giving details of the tides with forecasts
 
 
 
@@ -189,6 +166,8 @@ The following would be options to coonsider including in future versions of the 
   - HTML5
 
   - CSS
+
+  - JavaScript
 
   ### Frameworks, libraries and programs used
 
@@ -201,8 +180,8 @@ The following would be options to coonsider including in future versions of the 
         - Git was used for version control
   4. [Github](https://github.com/)
         - GitHub was used to store the code and allow collaboration on the project.
-  5. [Google Fonts](https://fonts.google.com/)
-        - Google Fonts was used for the custom fonts
+  5. [Contrast Finder](https://app.contrast-finder.org/?lang=en)
+        - Contrast Finder was used to check the contrast between text colour and background image
   6. [Tiny.PNG](https://tinypng.com/)
         - Tiny.PNG was used to compress images
   7. [StackEdit](https://stackedit.io/)
@@ -221,16 +200,26 @@ The following would be options to coonsider including in future versions of the 
         - used to provide sources to generate text for the website   
   14. [Wikipedia](https://www.wikipedia.org/)      
         - used to generate text
-  15. [Write human](https://www.writehuman.ai)
-        - used to humanise generated text
-  16. [Wallpaper cave](https://wallpapercave.com/)    
-        - used for copyright free images
+  15. [Open Weathermap API](https://openweathermap.org/guide)
+        - used to supply the weather API
+  16. [Font Awesome](https://fontawesome.com/)    
+        - used for the favicon
   17. [Pexels](https://www.pexels.com/)
         - used for copyright free images
   18. [W3C HTML validator](https://validator.w3.org/)
         - used to validate the HTML
   19. [W3 Jigsaw](https://jigsaw.w3.org/css-validator/)
         - used to validate the CSS
+  20. [JSHint](https://jshint.com/)
+        - used to validate the JavaScrip
+  21. [Rapid API guides](https://rapidapi.com/guides/)
+        - used for advice on using an API
+  22. [Free Code Camp](https://freecodecamp.org)   
+        - for help with JavaScript concepts and syntax 
+  23. [Code Academy](https://codeacademy.com)   
+        - for help with JavaScript concepts and syntax  
+  24. [Code explained repository on GitHub](https://github.com/CodeExplainedRepo/Weather-App-JavaScript)
+        - for help setting up a weather app using an API             
 
 
 
@@ -254,14 +243,16 @@ The site was deployed via GitHub using the following steps:
  ---
 
 ## TESTING
-  The W3C Markup Validator and W3C CSS Validator Services were used to validate all pages of the code to ensure there were no syntax errors.
+  The W3C Markup Validator,  W3C CSS Validator Services and JSHint were used to validate all pages of the code to ensure there were no syntax errors.
     
-  - [W3C Markup Validator](https://validator.w3.org/) - **insert link to validated code**
-  - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) - **insert link to validated CSS**
+  - [W3C Markup Validator](https://validator.w3.org/) - [HTML validation](readme-docs/html-validated.png)
+  - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) - [CSS validation](readme-docs/css-validated.png)
+
+  - [JavaScript Validator](https://jshint.com) - the JavaScript validation did not throw up and issues. The fact that the use of let and const to define variables and template literals is only available with ES6 was highlighted.
 
 ### Further Testing
   - The website was tested on Google Chrome, Safari, Firefox and Microsoft Edge and performance was good across all platforms. The only issue was a change in font.
-  - The website was viewed on a variety of screen sizes such as Desktop, Laptop, iPad Air, iPhone8, and Samsung Galaxy S25 ultra.
+  - The website was viewed on a variety of screen sizes such as Desktop, Laptop, iPad Air, iPhone8.
 
   Each feature was tested with the following results:
 
