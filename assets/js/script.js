@@ -120,7 +120,7 @@ function callAPI() {
         
         //combine weather elements into a template literal and insert it into the correct div to display
 
-        let forecastString = `<div>${date} <br>${temperature} <br> <img src="${iconUrl}" alt="${summary}"><br>${summary}<br>${windSpeed} </div>`;
+        let forecastString = `<div class="col-sm-12, col-md-6 col-lg-3">${date} <br>${temperature} <br> <img src="${iconUrl}" alt="${summary}"><br>${summary}<br>${windSpeed} </div>`;
         document.getElementById("forecast").innerHTML += forecastString;
 
     }
