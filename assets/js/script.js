@@ -6,6 +6,8 @@ const currentWeatherIcon = document.getElementById("current-weather-icon");
 const currentSummary = document.getElementById("current-summary");
 const forecast = document.getElementById("forecast");
 const currentDate = document.getElementById("current-date");
+const resetButton = document.getElementById("reset-page");
+
 
 
 
@@ -22,6 +24,7 @@ let apiKey = '752dd876d2d8e2f3f4886c7c478bb5d5';
 
 // function set up to call the api and add promises
 function callAPI() {
+    
     let locationName = locationInput.value;
 
 
@@ -90,8 +93,12 @@ function callAPI() {
                 addForecast(data.list[2], 2);
                 addForecast(data.list[3], 3);
                 addForecast(data.list[4], 4);
-            }
 
+
+
+
+            }
+            
 
 
         );
@@ -117,6 +124,7 @@ function callAPI() {
         document.getElementById("forecast").innerHTML += forecastString;
 
     }
+    
 
 }
 

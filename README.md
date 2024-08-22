@@ -45,21 +45,21 @@
  
  - **First time visitor goals**
 		 
-     * As a first time visitor I want to know what the aim of the site is and the information I can gain from it
+     * As a first time visitor I want to know what the aim of the site is and the information I can gain from it - the layout and appearance of the site is simple with minimal distractions from the goal. The user can easily see where to input there location and what the site will do.
 		 
-     * As a first time visitor I want to be able to navigate the site easily and be able to navigate it easily and obtain a forecast quickly
+     * As a first time visitor I want to be able to navigate the site easily and be able to navigate it easily and obtain a forecast quickly - there is only one input box and one button on the site so navigation is easy. The forecast only shows four days in advance so there is not too much information to process.
 		 
      * As a first time user I want to be able to view the site on a variety of different devices and have the content appear in a logical way
 		 
 - **Returning visitor goals**
 		
     
-    * As a returning visitor I want to be able to find my favourite locations easily
+    * As a returning visitor I want to be able to find my favourite locations easily - the search input area stores previously searched locations
 		
     
 - **Frequent visitor goals**
 		
-    * As a frequent visitor I want to be able to find out more information about the developer
+    * As a frequent visitor I want to be able to find out more information about the developer - the footer contains links to GitHub and socials
 ---
 
 ## CREATION PROCESS
@@ -157,6 +157,8 @@ The following would be options to consider including in future versions of the w
 
   - a page giving details of the tides with forecasts
 
+  - a toggle button to allow th user to toggle the background image between different weather scenes to add some fun and interactivity
+
 
 
 
@@ -251,61 +253,53 @@ The site was deployed via GitHub using the following steps:
   - [JavaScript Validator](https://jshint.com) - the JavaScript validation did not throw up and issues. The fact that the use of let and const to define variables and template literals is only available with ES6 was highlighted.
 
 ### Further Testing
-  - The website was tested on Google Chrome, Safari, Firefox and Microsoft Edge and performance was good across all platforms. The only issue was a change in font.
+  - The website was tested on Google Chrome, Safari, Firefox and Microsoft Edge and performance was good across all platforms.
   - The website was viewed on a variety of screen sizes such as Desktop, Laptop, iPad Air, iPhone8.
 
   Each feature was tested with the following results:
 
   | Feature | Test | Pass/fail |
   | ---| ---| ---|
-  | Navbar | Home link | Pass |
-  | Navbar | Sites and activities link | Pass |
-  | Navbar | The Strip link | Pass |
-  | Navbar | Newsletter link | Pass |
-  | Buttons | Newsletter | Pass|
-  | Logo | Viva Las Vegas | Pass|
-  | Form | Name placeholder hover | Pass|
-  | Form | Name no entry prompt | Pass |
-  | Form | Email placeholder hover | Pass |
-  | Form | Email incorrect entry prompt | Pass |
-  | Form | Subscribe button | Pass |
-  | Form | Thankyou message | Pass |
+  | Search field | modal deploys if no entry on clicking submit | Pass |
+  | Search field| search button | Pass |
+  | Forecast | Displays when search button clicked | Pass |
   | Social links| Facebook - hover | Pass|
   | Social links | Facebook - opens in new tab | Pass |
-  | Social links | Twitter - hover | Pass |
-  | Social links | Twitter - opens in new tab | Pass |
+  | Social links | GitHub - hover | Pass |
+  | Social links | GitHub - opens in new tab | Pass |
   | Social links | Instagram - hover | Pass |
   | Social links | Instagram - opens in new tab | Pass |
-  | Social links | LinkedIn - hover | Pass |
-  | Social links | LinkedIn - opens in new tab | Pass |
+  
 
 ## Lighthouse scores via Chrome dev tools 
 
-![Lighthouse scores](readme-docs/lighthouse.png)
+![Lighthouse scores](readme-docs/lighthouse-test.png)
   
 
 ### Accessibility     
 
-The site was tested via WAVE the web accessibility evaluation tool and gave the following results:
+The site was tested via WAVE the web accessibility evaluation tool and showed some alerts for contrast between the text and the background image. The colour of the text was changed and checked via [Contrast Finder](https://app.contrast-finder.org/?lang=en) which showed excellent contrast. The font size of the text was enlarged to help with the issue however after these changes the alerts still existed when evaluated on WAVE again. 
+There was not enough time to correct this issue but it will be looked at in future updates
 
-![WAVE image](readme-docs/WAVE.png)
 
 <br>
 
-The contrast errors shown were for the text in the hero image. The main image is relatively dark but the text is white and stands out well.
-One of the alerts was for the YouTube video used but this is beyond the bounds of our course to improve at the moment.
 
 ### Issues/Bugs
 
- - The hero image was not showing in full and was being cut off at the top of the screen which was solved by changing the styling in the CSS.
+ - The icons were coded to load using a URL updated with a variable and a template literal but were not loading initially despite showing up when the link was hardwired in and the link being checked externally. The icons were added into a folder rather than being accessed via the API website but the issue remained.
+ This remained an issue for a couple of days and advice was sought from Mark Briscoe who solved the issue by changing the way in which the src attribute in the HTML element was altered. 
 
-  - The hero image wasn't showing on deployment which was solved by changing the link from a URL in the HTML to adding the image as an asset and proving the link via a filepath.
+  - the link to the JS file was added incorrectly to begin with
 
-   - The burger icon was not opening on the mobile view which was caused by some of the Bootstrap script having been erased in error.
+  - When the favicon was added the weather icons did not display on the deployed site...the script for font awesome had been added in the wrong place.
 
-   - The images in the feature sections were not responsive on smaller screens and were showing in a row rather than a column. This was resolved by changing the bootstrap classes.
+  - no reset button/facility was added in error and this was only noticed very late in the development - code was added to correct this but I ran out of time to be able to make it work
 
-   - It was realised after deployment that all of the images would benefit from being optimised using [TinyPNG](https://tinypng.com/) 
+  - the location name was displaying as typed in the search box so ususally with a lowercase first letter - a line was added to the function to correct this
+
+
+
 
 
 
@@ -316,15 +310,19 @@ One of the alerts was for the YouTube video used but this is beyond the bounds o
    was used to help write the README.md
   - [Code Institute Sample README](https://github.com/Code-Institute-Solutions/SampleREADME)
   was used as a reference when writing the README.
-  - [Wikipedia](https://www.wikipedia.org/) was used to provide text for the features sections
+  - [Code explained repository](https://github.com/CodeExplainedRepo/Weather-App-JavaScript) was used to give a tutorial for using a weather API
   - [Code Institute](https://learn.codeinstitute.net/) was used for extra reference for HTML and CSS
   - [W3 Schools](https://www.w3schools.com/) was used for reference on syntax
   - [Stack Overflow](https://stackoverflow.com/) was used for syntax and coding queries
   
 **Media**
-  - All images were taken from [Pexels](https://www.pexels.com/) and [Wallpaper Cave](https://wallpapercave.com/). Credit to the individual artists: Joseph Hewitt, Isabella Mendes, Javon Swaby, Edoardo Tommasini, Luis Erives, Quintin Gellar, Daavid Guerrero, Kamsy and Juan Ortiz Jr
+  - All images were taken from [Pexels](https://www.pexels.com/). Credit to the individual artists: Brett Sayles
   - [Amiresponsive](https://ui.dev/amiresponsive) for the responsivity mockup on the README.
+
+  - the favicon was downloaded from [Flaticon](https://flaticon.com) with credit to the creator iconixar.
+
+  - the weather icons were taken from [Code explained repository on GitHub](https://github.com/CodeExplainedRepo/Weather-App-JavaScript)
 
 **Acknowledgements**
   - Amy Richardson - For providing support and resources 
-  - Mark Briscoe - For providing technical knowledge and support with coding and GitHub/GitPod
+  - Mark Briscoe - For providing technical knowledge and support with coding and GitHub/GitPod and a tutorial on creating a weather app using an API
